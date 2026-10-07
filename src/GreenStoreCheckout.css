@@ -1,0 +1,64 @@
+/* Main container */
+.Greenstorehome {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1500px;
+  width: 100%;
+}
+
+.Greenstorehome_container {
+  width: 100%;
+  padding: 0 10px; /* Add some side padding */
+}
+
+/* Product rows */
+.Greenstorehome_row {
+  display: flex;
+  z-index: 1;
+  justify-content: center; /* Center products in row */
+  gap: 15px; /* Space between products */
+  margin: 15px 0;
+}
+
+/* First row - 2 products */
+.Greenstorehome_row:nth-child(2) {
+  justify-content: space-around; /* Distribute 2 products evenly */
+}
+
+/* Second row - 3 products */
+.Greenstorehome_row:nth-child(3) {
+  justify-content: space-between; /* Distribute 3 products */
+}
+
+/* Third row - 1 product */
+.Greenstorehome_row:nth-child(4) {
+  justify-content: center; /* Center single product */
+}
+
+/* Individual product sizing */
+.Greenstorehome_row .Greenproduct {
+  flex: 0 1 calc(33% - 20px); /* Base width for 3 products */
+  min-width: 300px; /* Minimum product width */
+}
+
+/* First row - make 2 products wider */
+.Greenstorehome_row:nth-child(2) .Greenproduct {
+  flex: 0 1 calc(50% - 20px);
+}
+
+/* Third row - single product width */
+.Greenstorehome_row:nth-child(4) .Greenproduct {
+  flex: 0 1 calc(66% - 20px);
+  max-width: 800px;
+}
+
+/* Image styling */
+.Greenstorehome_image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  z-index: -1;
+  margin-bottom: -150px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+}

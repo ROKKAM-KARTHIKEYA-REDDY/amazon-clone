@@ -1,0 +1,309 @@
+:root {
+  --primary-green: #39ff14;
+  --secondary-green: #00ff99;
+  --accent-blue: #00cfff;
+  --dark-bg: #10131a;
+  --card-bg: rgba(20, 24, 34, 0.85);
+  --glass-bg: rgba(20, 24, 34, 0.7);
+  --border-glow: 0 0 16px 2px var(--primary-green);
+  --text-glow: 0 0 8px var(--primary-green);
+  --card-radius: 22px;
+  --card-shadow: 0 8px 32px 0 rgba(39,255,20,0.12);
+}
+
+.dashboard-bg {
+  min-height: 100vh;
+  background: radial-gradient(circle at 60% 40%, rgba(57,255,20,0.12) 0%, transparent 70%),
+              radial-gradient(circle at 20% 80%, rgba(0,255,153,0.10) 0%, transparent 80%),
+              radial-gradient(circle at 80% 80%, rgba(0,207,255,0.10) 0%, transparent 80%),
+              #10131a;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+.dashboard-container {
+  padding: 2.5rem 1rem 2rem 1rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-container::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  height: 700px;
+  background: radial-gradient(circle at 60% 40%, rgba(57,255,20,0.12) 0%, transparent 70%),
+              radial-gradient(circle at 20% 80%, rgba(0,255,153,0.10) 0%, transparent 80%),
+              radial-gradient(circle at 80% 80%, rgba(0,207,255,0.10) 0%, transparent 80%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.dashboard-title {
+  text-align: center;
+  color: var(--primary-green);
+  margin-bottom: 2.5rem;
+  font-size: 2.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 0 6px #39ff14, 0 0 2px #39ff14, 0 0 1px #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 2.2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.metric-card {
+  background: var(--card-bg);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  border: 1.5px solid rgba(57,255,20,0.18);
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  transition: transform 0.25s, box-shadow 0.25s, border 0.25s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.metric-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 32px 4px var(--primary-green), var(--card-shadow);
+  border: 1.5px solid var(--primary-green);
+}
+
+.metric-card h3 {
+  color: var(--primary-green);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-shadow: var(--text-glow);
+}
+
+.metric-card h3::before {
+  content: '🌱';
+  font-size: 1.2rem;
+}
+
+.metric-value {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 0 8px var(--primary-green), 0 0 2px #fff;
+  letter-spacing: 1px;
+}
+
+.metric-chart {
+  width: 100%;
+  height: 180px;
+  margin-top: 0.5rem;
+  background: var(--glass-bg);
+  border-radius: 16px;
+  box-shadow: 0 0 16px 0 rgba(39,255,20,0.08);
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-bar {
+  background: rgba(57,255,20,0.10);
+  border-radius: 10px;
+  height: 12px;
+  margin-top: 1.2rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress {
+  background: linear-gradient(90deg, var(--primary-green), var(--accent-blue));
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 12px 2px var(--primary-green);
+  transition: width 0.5s;
+}
+
+.progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.global-impact {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+  padding: 0.7rem 1rem;
+  background: rgba(39,255,20,0.07);
+  border-radius: 12px;
+  box-shadow: 0 0 8px 0 var(--primary-green);
+}
+
+.impact-icon {
+  font-size: 2.2rem;
+  color: var(--accent-blue);
+  filter: drop-shadow(0 0 8px var(--accent-blue));
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.global-impact p {
+  color: #baffc9;
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* Optional: Add a glowing earth background SVG or canvas for extra effect */
+.dashboard-container::after {
+  content: '';
+  position: absolute;
+  right: -120px;
+  bottom: -80px;
+  width: 600px;
+  height: 600px;
+  background: url('https://svgshare.com/i/13kA.svg') no-repeat center/contain;
+  opacity: 0.13;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-container h1 {
+    font-size: 2rem;
+  }
+  .dashboard-container::after {
+    width: 350px;
+    height: 350px;
+    right: -40px;
+    bottom: -30px;
+  }
+}
+
+.battery-bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2.5rem 0 1rem 0;
+}
+
+.battery-bar-outer {
+  position: relative;
+  width: 160px;
+  height: 54px;
+  border: 3px solid #39ff14;
+  border-radius: 18px 8px 8px 18px / 24px 8px 8px 24px;
+  background: rgba(16, 19, 26, 0.8);
+  box-shadow: 0 0 24px 2px #39ff14, 0 0 8px #39ff14 inset;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+}
+
+.battery-bar-inner {
+  height: 100%;
+  border-radius: 15px 0 0 15px / 22px 0 0 22px;
+  background: linear-gradient(90deg, #39ff14 60%, #baffc9 100%);
+  box-shadow: 0 0 16px 2px #39ff14 inset;
+  transition: width 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Vertical segment lines */
+.battery-bar-inner .battery-segment-vert {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: #10131a;
+  opacity: 0.7;
+  z-index: 2;
+}
+
+/* Position 3 vertical lines for 4 segments (25%, 50%, 75%) */
+.battery-bar-inner .battery-segment-vert.seg1 { left: 25%; }
+.battery-bar-inner .battery-segment-vert.seg2 { left: 50%; }
+.battery-bar-inner .battery-segment-vert.seg3 { left: 75%; }
+
+.battery-bar-cap {
+  position: absolute;
+  right: -18px;
+  top: 8px;
+  width: 18px;
+  height: 38px;
+  background: #10131a;
+  border: 3px solid #39ff14;
+  border-radius: 6px;
+  box-shadow: 0 0 8px #39ff14;
+}
+
+.battery-bar-label {
+  color: #39ff14;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-shadow: 0 0 6px #39ff14;
+  margin-top: 0.2rem;
+}
+
+/* Optional: Add battery segments */
+.battery-bar-outer::before,
+.battery-bar-outer::after,
+.battery-bar-outer .battery-segment {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 2px;
+  height: 34px;
+  background: rgba(57,255,20,0.25);
+  z-index: 2;
+}
+.battery-bar-outer::before { left: 40px; }
+.battery-bar-outer::after { left: 80px; }
+.battery-bar-outer .battery-segment { left: 120px; }

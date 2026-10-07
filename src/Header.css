@@ -1,0 +1,159 @@
+.header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #131921;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0 10px;
+    gap: 10px;
+}
+
+.header_logo {
+    width: 100px;
+    object-fit: contain;
+    margin: 0 10px;
+    margin-top: 5px;
+}
+
+.header_search {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    max-width: 800px;
+    height: 40px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 0 10px;
+}
+
+.header_searchSelect {
+    height: 100%;
+    border: none;
+    padding: 0 8px;
+    background-color: #f3f3f3;
+    font-size: 12px;
+    border-right: 1px solid #ddd;
+    cursor: pointer;
+    width: 60px;
+}
+
+.header_searchInput {
+    flex: 1;
+    height: 100%;
+    padding: 0 15px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+}
+
+.header__searchicon {
+    height: 100% !important;
+    width: 45px !important;
+    padding: 0;
+    background-color: #febd69;
+    color: #131921;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.header__searchicon:hover {
+    background-color: #f3a847;
+}
+
+.header_nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+}
+
+.header_option {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    color: white;
+    padding: 8px 9px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+.header_option:hover {
+    border: 1px solid white;
+}
+
+.header_optionlineone {
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.header_optionlinetwo {
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 15px;
+}
+
+.header_optionbasket {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 8px 9px;
+    border: 1px solid transparent;
+}
+
+.header_optionbasket:hover {
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+.header_basketcount {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.greenStoreButton {
+    background: linear-gradient(to bottom, #26d07c, #00a65e);
+    border-radius: 4px;
+    border: 1px solid #008a53;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    color: white;
+    cursor: pointer;
+    font-family: 'Amazon Ember', Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    height: 28px;
+    padding: 0 12px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.greenStoreButton:hover {
+    background: linear-gradient(to bottom, #2dd887, #00b368);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.notifications {
+    padding: 8px 9px;
+    border: 1px solid transparent;
+}
+
+.notifications:hover {
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+.notifications .MuiBadge-badge {
+    top: 5px;
+    right: 5px;
+    background-color: #f44336;
+    color: white;
+    font-size: 10px;
+    height: 16px;
+    min-width: 16px;
+    padding: 0 4px;
+}

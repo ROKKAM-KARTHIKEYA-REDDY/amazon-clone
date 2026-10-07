@@ -1,0 +1,52 @@
+/* NotificationCard.css */
+.notificationCard {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.notificationCard:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transform: translateY(-1px);
+}
+
+.notificationCard.unread {
+    background-color: #f7f7f7;
+    border-left: 3px solid #007185;
+}
+
+.notificationCard__content {
+    flex: 1;
+}
+
+.notificationCard__content h3 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    color: #111;
+}
+
+.notificationCard__content p {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.notificationCard__content small {
+    color: #888;
+    font-size: 12px;
+}
+
+.notificationCard__unreadDot {
+    width: 8px;
+    height: 8px;
+    background-color: #007185;
+    border-radius: 50%;
+    align-self: center;
+    margin-left: 10px;
+}

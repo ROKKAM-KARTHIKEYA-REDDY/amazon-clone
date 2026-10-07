@@ -1,0 +1,32 @@
+.subscription-container {
+  padding: 40px;
+  max-width: 500px;
+  margin: 0 auto;
+  background: #e8f5e9;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.subscription-container h2 {
+  color: #2e7d32;
+}
+
+.payment-form {
+  margin-top: 20px;
+}
+
+.payment-form button {
+  background-color: #2e7d32;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+.card-error {
+  color: red;
+  margin-top: 10px;
+}

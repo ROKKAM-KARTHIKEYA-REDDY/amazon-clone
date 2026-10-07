@@ -1,0 +1,64 @@
+.orders {
+  padding: 20px 80px;
+}
+
+.orders_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.orders_header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+}
+
+.orders_buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.orders_button {
+  padding: 10px 18px;
+  font-size: 14px;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.return_button {
+  background-color: #ffe493; /* Soft yellow */
+  color: #111;
+  border: 1px solid #b8860b;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-family: 'Amazon Ember', Arial, sans-serif;
+}
+
+.return_button:hover {
+   background-color: #fbd460;
+  transform: scale(1.02);
+}
+
+.eco_button {
+  background: linear-gradient(to right, #26d07c, #00b368);
+  color: white;
+  border: 1px solid #00724c;
+  font-weight: bold;
+  font-family: 'Amazon Ember', Arial, sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 150, 100, 0.3);
+}
+
+.eco_button:hover {
+   background: linear-gradient(to right, #2fe68a, #00c77a);
+  transform: scale(1.03);
+}
+
+.orders_order {
+  margin-top: 20px;
+}

@@ -1,0 +1,325 @@
+.fakeclaims {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.fakeclaims h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #2e7d32;
+  text-align: center;
+}
+
+.fakeclaims__subtitle {
+  color: #555;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.fakeclaims__form {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.fakeclaims__section {
+  margin-bottom: 40px;
+}
+
+.fakeclaims__section h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 8px;
+}
+
+/* Order Cards */
+.fakeclaims__orderCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.fakeclaims__orderCard {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fakeclaims__orderCard:hover {
+  border-color: #4caf50;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.fakeclaims__orderCard.selected {
+  border-color: #4caf50;
+  background-color: #f1f8e9;
+}
+
+.fakeclaims__orderDate {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.fakeclaims__orderTotal {
+  color: #2e7d32;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.fakeclaims__orderItems {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fakeclaims__orderItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fakeclaims__orderItem img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.fakeclaims__orderItem span {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fakeclaims__moreItems {
+  font-size: 13px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Product Grid */
+.fakeclaims__productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.fakeclaims__productCard {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.fakeclaims__productCard:hover {
+  border-color: #4caf50;
+}
+
+.fakeclaims__productCard.selected {
+  border-color: #4caf50;
+  background-color: #f1f8e9;
+}
+
+.fakeclaims__productCard img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.fakeclaims__productInfo h3 {
+  font-size: 15px;
+  margin: 5px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fakeclaims__productInfo p {
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+/* Upload Area */
+.fakeclaims__uploadArea {
+  margin-top: 15px;
+}
+
+.fakeclaims__uploadLabel input {
+  display: none;
+}
+
+.fakeclaims__uploadBox {
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fakeclaims__uploadBox:hover {
+  border-color: #4caf50;
+  background-color: #f8f9fa;
+}
+
+.fakeclaims__uploadIcon {
+  font-size: 24px;
+  color: #4caf50;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.fakeclaims__uploadHint {
+  font-size: 13px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Image Preview */
+.fakeclaims__imagePreview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.fakeclaims__imageItem {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.fakeclaims__imageItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fakeclaims__removeImage {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Description */
+.fakeclaims__descriptionBox {
+  margin-top: 15px;
+}
+
+.fakeclaims__descriptionBox textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+  resize: vertical;
+  min-height: 120px;
+}
+
+.fakeclaims__descriptionHint {
+  font-size: 13px;
+  color: #666;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+/* Submit Button */
+.fakeclaims__submitButton {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.fakeclaims__submitButton:hover {
+  background: #3d8b40;
+}
+
+.fakeclaims__submitButton:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.fakeclaims__spinner {
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top: 2px solid white;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Success Message */
+.fakeclaims__success {
+  background: #e8f5e9;
+  color: #1b5e20;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.fakeclaims__success h2 {
+  margin-top: 0;
+  color: #1b5e20;
+}
+
+.fakeclaims__successButton {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin-top: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* No Orders */
+.fakeclaims__noOrders {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 20px;
+}

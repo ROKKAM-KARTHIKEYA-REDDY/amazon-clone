@@ -1,0 +1,40 @@
+/* Notifications.css */
+.notifications {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.notifications__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.notifications__markAll {
+    background: none;
+    border: none;
+    color: #0066c0;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.notifications__markAll:hover {
+    text-decoration: underline;
+    color: #c45500;
+}
+
+.notifications__empty {
+    text-align: center;
+    padding: 40px 0;
+    color: #555;
+}
+
+.notifications__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
